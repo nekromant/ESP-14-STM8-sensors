@@ -342,7 +342,8 @@ namespace Twis
 		{
 			GetCalValues();
 		}
-	/*	static void PrintCalArray()
+		template<typename Uart>
+		static void PrintCalArray()
 		{
 			const uint8_t* const names[] = {
 				"AC1", "AC2", "AC3", "AC4", "AC5", "AC6",
@@ -359,7 +360,7 @@ namespace Twis
 				Uart::Newline();
 			}
 		}
-	*/
+
 		static bool GetValues(PT& pt)
 		{
 			if(!SendCommand(CmdTemperature)) return false;
