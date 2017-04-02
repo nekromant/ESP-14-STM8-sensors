@@ -422,7 +422,6 @@ namespace Twis
 	template<typename Twi, uint8_t Oss>
 	uint16_t Bmp180<Twi, Oss>::calArr[11];
 
-
   template<typename Twi>
   class Bmp280
   {
@@ -640,7 +639,42 @@ private:
   template<typename Twi>
   uint16_t Bmp280<Twi>::calArr[12];
 
+  template<typename Twi>
+  class Hdc1080
+  {
+  private:
+    enum {
+      BaseAddr = 0x40,
+      MeasureDelay = 20
+    };
+    enum Mode {
+      Tres14bit = 0U << 10,
+      Tres11bit = 1U << 10,
+      Hres14bit = 0U << 8,
+      Hres11bit = 1U << 8,
+      Hres8bit = 2U << 8
+    };
 
+  public:
+    struct HT {
+      int16_t temperature;
+      uint16_t humidity;
+    };
+
+    static bool GetValues(HT& ht)
+    {
+      if(Ack != Twi::Write(BaseAddr, 0)) {
+        return false;
+      }
+      delay_ms(MeasureDelay);
+      if(Ack != Twi::Read(BaseAddr, (uint8_t*)&ht, 4)) {
+        return false;
+      }
+      ht.temperature = int16_t((uint32_t(ht.temperature) * 1650) >> 16) - 400;
+      ht.humidity = (uint32_t(ht.humidity) * 1000) >> 16;
+      return true;
+    }
+  };
 
 }//i2c
 }//Mcudrv
