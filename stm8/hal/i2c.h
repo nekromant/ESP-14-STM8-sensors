@@ -423,11 +423,10 @@ namespace Twis
 	uint16_t Bmp180<Twi, Oss>::calArr[11];
 
 
-  template<typename Twi, uint8_t OversamplingFactor = 0>
+  template<typename Twi>
   class Bmp280
   {
-    static_assert(OversamplingFactor < 4, "Oversampling Factor must be in range 0..3");
-public:
+  public:
     //ctrl_meas register defs 0xF4
     enum Toversampling {
       OsTx1 = 1U << 5,
@@ -467,7 +466,6 @@ public:
       IIR_x8 = 4U << 2,
       IIR_x16 = 5U << 2
     };
-
 private:
     enum {
       BaseAddr = 0x76,
@@ -481,43 +479,58 @@ private:
       RegID = 0xD0,
       RegControlMeas = 0xF4,
       RegConfig = 0xF5,
-      RegTdata = 0xF7,
-      RegTxlsb = 0xF9,
-      RegPdata = 0xFA,
-      RegPxlsb = 0xFC,
+      RegPdata = 0xF7,
+      RegPxlsb = 0xF9,
+      RegTdata = 0xFA,
+      RegTxlsb = 0xFC,
       RegCalBegin = 0x88,
-      RegDataBegin = RegTdata
+      RegDataBegin = RegPdata
     };
     enum CalIndexes
     {
       T1, T2, T3,
       P1, P2, P3, P4, P5, P6, P7, P8, P9
     };
-    enum ControlValue
-    {
-      CmdTemperature = 0x2E,
-      CmdPressure = 0x34 | (Oss << 6),
-    };
 
     static uint16_t calArr[12];
 
+    static uint16_t ntohs(uint16_t a) {
+      return ((((a)>>8)&0xff)|(((a)<<8)&0xff00));
+    }
     static AckState ForceMeasure()
     {
-      uint8_t data[2] = { RegControl, ctrl };
+      uint8_t data[2] = { RegControlMeas, (uint8_t)Oss | OsTx1 | ModeForced };
       return Twi::Write(BaseAddr, data, 2);
     }
-    static void GetData(uint32_t* rawData)
+    static bool GetData(uint32_t* rawData)
     {
+      uint8_t* rawData_u8 = (uint8_t*)rawData;
       Twi::Write(BaseAddr, (uint8_t)RegDataBegin, NoStop);
       Twi::Restart();
-      Twi::Read(BaseAddr, (uint8_t*)rawData, 6);
+      if(Twi::Read(BaseAddr, rawData_u8 + 1, 6)) {
+        rawData_u8[0] = 0;
+        rawData_u8[7] = rawData_u8[6];
+        rawData_u8[6] = rawData_u8[5];
+        rawData_u8[5] = rawData_u8[4];
+        rawData_u8[4] = 0;
+        rawData[0] >>= 4;
+        rawData[1] >>= 4;
+        return true;
+      }
+      else {
+        return false;
+      }
     }
     static void GetCalValues()
     {
       Twi::Write(BaseAddr, (uint8_t)RegCalBegin, NoStop);
       Twi::Restart();
       Twi::Read(BaseAddr, (uint8_t*)&calArr, sizeof(calArr));
+      for(uint8_t i = 0; i < sizeof(calArr); ++i) {
+        calArr[i] = ntohs(calArr[i]);
+      }
     }
+
   public:
     static uint8_t GetID()
     {
@@ -535,144 +548,97 @@ private:
     static void Init()
     {
       GetCalValues();
-      //Set oss
     }
-    template<typename Uart>
+    template<typename Out>
     static void PrintCalArray()
     {
-      const uint8_t* const names[] = {
+      static const uint8_t* const names[] = {
         "T1", "T2", "T3",
         "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9"
       };
       for(uint8_t i = 0; i < sizeof(calArr); ++i) {
-        Uart::Puts(names[i]);
-        Uart::Puts(": ");
+        Out::Puts(names[i]);
+        Out::Puts(": ");
         if(i == 0 || i == 3) {
-          Uart::Puts(calArr[i]);
+          Out::Puts(calArr[i]);
         }
         else {
-          Uart::Puts((int16_t)calArr[i]);
+          Out::Puts((int16_t)calArr[i]);
         }
-        Uart::Newline();
+        Out::Newline();
       }
     }
-/*
+
     static bool GetValues(PT& pt)
     {
-      if(!SendCommand(CmdTemperature)) return false;
-      delay_ms(5);
-      uint16_t rawvalueT = GetReg(RegData);
-      int32_t x1 = ((int32_t)rawvalueT - calArr[AC6]) * calArr[AC5] / (1U << 15);
-      int32_t x2 = (int32_t)((int16_t)calArr[MC]) * (1U << 11) / (x1 + calArr[MD]);
-      int32_t b5 = x1 + x2;
-      pt.temperature = (b5 + 8) / (1U << 4);
-
-      if(!SendCommand(CmdPressure)) return false;
-      delay_ms(PMeasureDelay);
-      int32_t rawvalueP = GetReg(RegData);
-      if(Oss) rawvalueP = (rawvalueP << 8 | (GetReg(RegXlsb)) & 0xFF) >> (8 - Oss);
-      int32_t b6 = b5 - 4000;
-      x1 = ((int32_t)((int16_t)calArr[B2]) * (b6 * b6 / (1U << 12))) / (1U << 11);
-      x2 = (int32_t)((int16_t)calArr[AC2]) * b6 / (1U << 11);
-      int32_t x3 = x1 + x2;
-      int32_t b3 = ((((int32_t)((int16_t)calArr[AC1]) * 4 + x3) << Oss) + 2) / 4;
-      x1 = (int32_t)((int16_t)calArr[AC3]) * b6 / (1U << 13);
-      x2 = ((int32_t)((int16_t)calArr[B1]) * ((b6 * b6) / (1U << 12))) / (1UL << 16);
-      x3 = ((x1 + x2) + 2) / 4;
-      uint32_t b4 = (int32_t)calArr[AC4] * (x3 + 32768U) >> 15U;
-      uint32_t b7 = (rawvalueP - b3) * (50000U >> Oss);
-      uint32_t p;
-      if(b7 < 0x80000000UL)
-      {
-        p = (b7 * 2) / b4;
+      if(ForceMeasure() == NoAck) {
+        return false;
       }
-      else
-      {
-        p = (b7 / b4) * 2;
+      delay_ms(MeasureDelay);
+      uint32_t data[2];
+      if(GetData((uint32_t*)data)) {
+        int32_t t_fine;
+        pt.temperature = CompensateTemperature(data[1], t_fine);
+        pt.pressure = CompensatePressure(data[0], t_fine);
+        return true;
       }
-      x1 = (p >> 8) * (p >> 8);
-      x1 = (x1 * 3038) >> 16;
-      x2 = (-7357 * (int32_t)p) >> 16;
-      p = p + ((x1 + x2 + 3791) >> 4);
-      pt.pressure = p;
-      return true;
-    }
-    static uint32_t GetPressure()
-    {
-      PT pt;
-      GetValues(pt);
-      return pt.pressure;
+      else {
+        return false;
+      }
     }
 
-    static int16_t GetTemperature()
-    {
-      SendCommand(CmdTemperature);
-      delay_ms(5);
-      uint16_t rawvalue = GetReg(RegData);
-      int32_t x1 = ((int32_t)rawvalue - calArr[AC6]) * calArr[AC5] / (1U << 15);
-      int32_t x2 = (int32_t)((int16_t)calArr[MC]) * (1U << 11) / (x1 + calArr[MD]);
-      return (x1 + x2 + 8) / (1U << 4);
-    }
-    */
-
-    s32 CompensateTemperature(s32 v_uncomp_temperature_s32, u32& t_fine)
+    static s32 CompensateTemperature(s32 uncompT, s32& t_fine)
     {
       /* calculate true temperature*/
       /*calculate x1*/
-      s32 v_x1_u32r = ((((v_uncomp_temperature_s32 >> 3) - ((s32)calArr[T1] << 1))) * ((s32)calArr[T2])) >> 11;
+      s32 v_x1_u32r = ((((uncompT >> 3) - ((s32)calArr[T1] << 1))) * ((s32)s16(calArr[T2]))) >> 11;
       /*calculate x2*/
-      s32 v_x2_u32r = (((((v_uncomp_temperature_s32 >> 4) - ((s32)calArr[T1])) *
-                    ((v_uncomp_temperature_s32 >> 4) - ((s32)calArr[T1]))) >> 12) * ((s32)calArr[T3])) >> 14;
+      s32 v_x2_u32r = (((((uncompT >> 4) - ((s32)calArr[T1])) *
+                    ((uncompT >> 4) - ((s32)calArr[T1]))) >> 12) * ((s32)s16(calArr[T3]))) >> 14;
       /*calculate t_fine*/
       t_fine = v_x1_u32r + v_x2_u32r;
       /*calculate temperature*/
       return (t_fine * 5 + 128) >> 8;
     }
-
-    u32 CompensatePressure(s32 v_uncomp_pressure_s32, u32& t_fine)
+    static u32 CompensatePressure(s32 uncompP, s32& t_fine)
     {
-      u32 v_pressure_u32 = 0;
       /* calculate x1*/
-      s32 v_x1_u32r = (((s32)t_fine) >> 1) - (s32)64000;
+      s32 v_x1_u32r = (t_fine >> 1) - 64000L;
       /* calculate x2*/
-      s32 v_x2_u32r = (((v_x1_u32r >> 2) * (v_x1_u32r >> 2)) >> 11) * ((s32)calArr[P6]);
-      v_x2_u32r = v_x2_u32r + ((v_x1_u32r * ((s32)calArr[P5])) << 1);
-      v_x2_u32r = (v_x2_u32r >> 2) + (((s32)calArr[P4]) << 16);
+      s32 v_x2_u32r = (((v_x1_u32r >> 2) * (v_x1_u32r >> 2)) >> 11) * ((s32)s16(calArr[P6]));
+      v_x2_u32r = v_x2_u32r + ((v_x1_u32r * ((s32)s16(calArr[P5]))) << 1);
+      v_x2_u32r = (v_x2_u32r >> 2) + (((s32)s16(calArr[P4])) << 16);
       /* calculate x1*/
       v_x1_u32r = (((calArr[P3] * (((v_x1_u32r >> 2) * (v_x1_u32r >> 2)) >> 13)) >> 3) +
-                   ((((s32)calArr[P2]) * v_x1_u32r) >> 1)) >> 18;
-      v_x1_u32r = ((((32768 + v_x1_u32r)) * ((s32)calArr[P1])) >> 15);
+                   ((((s32)s16(calArr[P2])) * v_x1_u32r) >> 1)) >> 18;
+      v_x1_u32r = ((((32768L + v_x1_u32r)) * ((s32)calArr[P1])) >> 15);
       /* calculate pressure*/
-      v_pressure_u32 = (((u32)(((s32)1048576) - v_uncomp_pressure_s32) - (v_x2_u32r >> 12))) * 3125;
-      /* check overflow*/
-      if(v_pressure_u32 < 0x80000000) {
-        /* Avoid exception caused by division by zero */
-        if(v_x1_u32r != 0) {
+      u32 v_pressure_u32 = (((u32)(1048576L - uncompP) - (v_x2_u32r >> 12))) * 3125;
+      /* Avoid exception caused by division by zero */
+      if(v_x1_u32r != 0) {
+        /* check overflow*/
+        if(v_pressure_u32 < 0x80000000UL) {
           v_pressure_u32 = (v_pressure_u32 << 1) / ((u32)v_x1_u32r);
         }
         else {
-          return 0;
+          v_pressure_u32 = (v_pressure_u32 / (u32)v_x1_u32r) * 2;
         }
-      }
-      /* Avoid exception caused by division by zero */
-      else if (v_x1_u32r != 0) {
-        v_pressure_u32 = (v_pressure_u32 / (u32)v_x1_u32r) * 2;
       }
       else {
         return 0;
       }
       /* calculate x1*/
-      v_x1_u32r = (((s32)calArr[P9]) * ((s32)(((v_pressure_u32 >> 3) * (v_pressure_u32 >> 3)) >> 13))) >> 12;
+      v_x1_u32r = (((s32)s16(calArr[P9])) * ((s32)(((v_pressure_u32 >> 3) * (v_pressure_u32 >> 3)) >> 13))) >> 12;
       /* calculate x2*/
-      v_x2_u32r = (((s32)(v_pressure_u32 >> 2)) * ((s32)calArr[P8])) >> 13;
+      v_x2_u32r = (((s32)(v_pressure_u32 >> 2)) * ((s32)s16(calArr[P8]))) >> 13;
       /* calculate true pressure*/
-      v_pressure_u32 = (u32)((s32)v_pressure_u32 + ((v_x1_u32r + v_x2_u32r + calArr[P7]) >> 4));
+      v_pressure_u32 = (u32)((s32)v_pressure_u32 + ((v_x1_u32r + v_x2_u32r + s16(calArr[P7])) >> 4));
       return v_pressure_u32;
     }
 
   };
-  template<typename Twi, uint8_t Oss>
-  uint16_t Bmp280<Twi, Oss>::calArr[12];
+  template<typename Twi>
+  uint16_t Bmp280<Twi>::calArr[12];
 
 
 

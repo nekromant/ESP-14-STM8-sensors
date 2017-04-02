@@ -19,7 +19,7 @@ template void Uart::RxISR();
 
 typedef Twis::SoftTwi<Twis::Standard, Pb4, Pb5> i2c;
 typedef Twis::Bh1750<i2c> LightSensor;
-typedef Twis::Bmp180<i2c> PressureSensor;
+typedef Twis::Bmp280<i2c> PressureSensor;
 
 int main()
 {
@@ -28,26 +28,24 @@ int main()
 	GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
 	GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
 	GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
-	{
-		using namespace Uarts;
-		::Uart::Init<DefaultCfg, 115200>();
-	}
+  Uart::Init<Uarts::DefaultCfg, 115200>();
 	i2c::Init();
 	LightSensor::Init();
 	PressureSensor::Init();
 	enableInterrupts();
-//	PressureSensor::PrintCalArray<Uart>();
-	PressureSensor::PT pt;
-	while(true) {
+  Uart::Newline();
+  PressureSensor::PT pt;
+  while(true) {
 		delay_ms(1000);
-		PressureSensor::GetValues(pt);
-		Uart::Puts("\r                    \r");
-		Uart::Puts(LightSensor::Read());
-		Uart::Puts("  ");
-		Uart::Puts(pt.pressure);
-		Uart::Puts(" Pa ");
-		Uart::Puts(pt.temperature);
-		Uart::Puts(" C");
+    PressureSensor::GetValues(pt);
+    Uart::Puts("\r                    \r");
+//    Uart::Puts(LightSensor::Read());
+    Uart::Puts(pt.pressure);
+    Uart::Puts(" ");
+    Uart::Puts(pt.temperature);
+//    Uart::Puts(" Pa ");
+//    Uart::Puts(pt.temperature);
+//    Uart::Puts(" C");
 	}
 }
 
