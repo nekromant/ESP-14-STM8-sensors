@@ -24,16 +24,16 @@ typedef Twis::Hdc1080<i2c> HSensor;
 
 int main()
 {
-	SysClock::SetHsiDivider(SysClock::Div1); //set F_CPU to 16 MHz
-	GpioA::WriteConfig<0xFF, GpioBase::In_Pullup>();
-	GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
-	GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
-	GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
+  SysClock::SetHsiDivider(SysClock::Div1); //set F_CPU to 16 MHz
+  GpioA::WriteConfig<0xFF, GpioBase::In_Pullup>();
+  GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
+  GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
+  GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
   Uart::Init<Uarts::DefaultCfg, 115200>();
-	i2c::Init();
+  i2c::Init();
   LSensor::Init();
   PSensor::Init();
-	enableInterrupts();
+  enableInterrupts();
   Uart::Newline();
   PSensor::PT pt;
   HSensor::HT ht;

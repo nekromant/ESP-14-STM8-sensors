@@ -38,3 +38,4 @@ stm8/drivers/hd44780.h
 stm8/hal/i2c.h
 stm8/wake/sensors.h
 stm8/hal/spi.h
+stm8/drivers/modbus.h
