@@ -985,6 +985,7 @@
           <name>CCDefines</name>
           <state>NDEBUG</state>
           <state>STM8S003</state>
+          <state>F_CPU=2000000UL</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -1056,6 +1057,9 @@
           <state>$PROJ_DIR$\stm8\hal</state>
           <state>$PROJ_DIR$\stm8\drivers</state>
           <state>$PROJ_DIR$\stm8\wake</state>
+          <state>$PROJ_DIR$\modbus\rtu\</state>
+          <state>$PROJ_DIR$\modbus\include\</state>
+          <state>$PROJ_DIR$\modbus\stm8port\</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1085,7 +1089,7 @@
         </option>
         <option>
           <name>IccLang</name>
-          <state>1</state>
+          <state>2</state>
         </option>
         <option>
           <name>IccCDialect</name>
@@ -1110,7 +1114,7 @@
         </option>
         <option>
           <name>IccCppInlineSemantics</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IccStaticDestr</name>
@@ -1593,9 +1597,6 @@
       <data/>
     </settings>
   </configuration>
-  <mfc_discard>
-    <configuration>Release</configuration>
-  </mfc_discard>
   <group>
     <name>common</name>
     <file>
@@ -1678,6 +1679,90 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\stm8_framework\hal\uart.h</name>
+    </file>
+  </group>
+  <group>
+    <name>modbus</name>
+    <group>
+      <name>Functions</name>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbfunccoils.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbfuncdiag.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbfuncholding.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbfuncinput.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbfuncother.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\functions\mbutils.c</name>
+      </file>
+    </group>
+    <group>
+      <name>Include</name>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mb.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mbconfig.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mbframe.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mbfunc.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mbport.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mbproto.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\include\mbutils.h</name>
+      </file>
+    </group>
+    <group>
+      <name>Rtu</name>
+      <file>
+        <name>$PROJ_DIR$\modbus\rtu\mbcrc.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\rtu\mbcrc.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\rtu\mbrtu.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\rtu\mbrtu.h</name>
+      </file>
+    </group>
+    <group>
+      <name>stm8port</name>
+      <file>
+        <name>$PROJ_DIR$\modbus\stm8port\port.h</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\stm8port\portevent.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\stm8port\portserial.cpp</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\modbus\stm8port\porttimer.cpp</name>
+      </file>
+    </group>
+    <file>
+      <name>$PROJ_DIR$\modbus\mb.c</name>
     </file>
   </group>
   <group>

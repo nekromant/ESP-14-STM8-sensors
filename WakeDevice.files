@@ -1,4 +1,3 @@
-stm8/linker/lnkstm8s003f3_bootOffset.icf
 
 stm8/common/circularBuffer.h
 stm8/common/type_traits.h
@@ -17,25 +16,31 @@ stm8/hal/stm8s.h
 stm8/hal/timers.h
 stm8/hal/uart.h
 
-stm8/wake/wake_base.h
-stm8/wake/led_driver.h
-stm8/wake/bootloaderDefines.h
-stm8/wake/bootloader.h
-
 WakeDevice.config
 WakeDevice.includes
-main.cpp
 
-stm8/wake/led_driver_mbi6651.h
-stm8/wake/led_driver_ncp3066.h
-stm8/wake/led_driver_strip.h
-stm8/wake/relays.h
-stm8/wake/switch.h
-stm8/drivers/adc_keyboard.h
-stm8/wake/power_supply.h
-stm8/hal/adc.h
-stm8/drivers/hd44780.h
-stm8/hal/i2c.h
-stm8/wake/sensors.h
-stm8/hal/spi.h
-stm8/drivers/modbus.h
+modbus/functions/mbfunccoils.c
+modbus/functions/mbfuncdiag.c
+modbus/functions/mbfuncdisc.c
+modbus/functions/mbfuncholding.c
+modbus/functions/mbfuncinput.c
+modbus/functions/mbfuncother.c
+modbus/functions/mbutils.c
+modbus/include/mb.h
+modbus/include/mbconfig.h
+modbus/include/mbframe.h
+modbus/include/mbfunc.h
+modbus/include/mbport.h
+modbus/include/mbproto.h
+modbus/include/mbutils.h
+modbus/rtu/mbcrc.c
+modbus/rtu/mbcrc.h
+modbus/rtu/mbrtu.c
+modbus/rtu/mbrtu.h
+modbus/stm8port/port.h
+modbus/stm8port/portevent.cpp
+modbus/stm8port/portserial.cpp
+modbus/stm8port/porttimer.cpp
+modbus/mb.c
+
+main.cpp

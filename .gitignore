@@ -14,3 +14,6 @@ stm8/drivers/s1d157xx.h
 stm8/drivers/ssd1306.h
 stm8/wake/
 stm8/linker/
+modbus/ascii/
+modbus/stm8port/demo.c
+modbus/tcp/
