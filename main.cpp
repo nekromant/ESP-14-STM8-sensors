@@ -13,13 +13,9 @@
 
 using namespace Mcudrv;
 
-//typedef Uarts::UartIrq<512,16> Uart;
-
-//template void Uart::TxISR();
-//template void Uart::RxISR();
-
-#define REG_INPUT_START 1000
-#define REG_INPUT_NREGS 4
+#define REG_INPUT_START 1
+#define REG_INPUT_NREGS 5
+#define DEVICE_ADDRESS 42
 
 /* ----------------------- Static variables ---------------------------------*/
 static USHORT   usRegInputStart = REG_INPUT_START;
@@ -30,7 +26,6 @@ typedef Twis::Bh1750<i2c> LSensor;
 typedef Twis::Bmp280<i2c> PSensor;
 typedef Twis::Hdc1080<i2c> HSensor;
 
-
 int main()
 {
 //  SysClock::SetHsiDivider(SysClock::Div1); //set F_CPU to 16 MHz
@@ -38,21 +33,16 @@ int main()
   GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
   GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
   GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
-//  Uart::Init<Uarts::DefaultCfg, 9600>();
-  i2c::Init();
-  LSensor::Init();
-  PSensor::Init();
-  eMBErrorCode    eStatus;
+//  i2c::Init();
+//  LSensor::Init();
+//  PSensor::Init();
 
-  eStatus = eMBInit(MB_RTU, 0x0A, 0, 0, MB_PAR_NONE);
+
+  eMBInit(MB_RTU, DEVICE_ADDRESS, 0, 9600, MB_PAR_NONE);
   enableInterrupts();
-
-  /* Enable the Modbus Protocol Stack. */
-  eStatus = eMBEnable();
-
+  eMBEnable();
   for(;;) {
       eMBPoll( );
-      /* Here we simply count the number of poll cycles. */
       usRegInputBuf[0]++;
   }
 //  Uart::Newline();
@@ -98,11 +88,11 @@ eMBErrorCode eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRe
 {
   eMBErrorCode eStatus = MB_ENOERR;
   int iRegIndex;
+  uint16_t* regBuffer16 = (uint16_t*)pucRegBuffer;
   if((usAddress >= REG_INPUT_START) && (usAddress + usNRegs <= REG_INPUT_START + REG_INPUT_NREGS)) {
     iRegIndex = (int)(usAddress - usRegInputStart);
     while(usNRegs > 0) {
-      *pucRegBuffer++ = (unsigned char)(usRegInputBuf[iRegIndex] >> 8);
-      *pucRegBuffer++ = (unsigned char)(usRegInputBuf[iRegIndex] & 0xFF);
+      *regBuffer16++ = usRegInputBuf[iRegIndex];
       iRegIndex++;
       usNRegs--;
     }

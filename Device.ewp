@@ -147,7 +147,7 @@
         </option>
         <option>
           <name>IccOptLevel</name>
-          <state>3</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccOptStrategy</name>
@@ -156,12 +156,12 @@
         </option>
         <option>
           <name>IccOptLevelSlave</name>
-          <state>3</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccOptAllowList</name>
           <version>0</version>
-          <state>111111</state>
+          <state>000000</state>
         </option>
         <option>
           <name>IccGenerateDebugInfo</name>
@@ -190,6 +190,7 @@
         <option>
           <name>CCDefines</name>
           <state>STM8S003</state>
+          <state>F_CPU=2000000UL</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -257,8 +258,13 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>$PROJ_DIR$\inc</state>
-          <state>$PROJ_DIR$\src</state>
+          <state>$PROJ_DIR$\stm8\common</state>
+          <state>$PROJ_DIR$\stm8\hal</state>
+          <state>$PROJ_DIR$\stm8\drivers</state>
+          <state>$PROJ_DIR$\stm8\wake</state>
+          <state>$PROJ_DIR$\modbus\rtu\</state>
+          <state>$PROJ_DIR$\modbus\include\</state>
+          <state>$PROJ_DIR$\modbus\stm8port\</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -608,7 +614,7 @@
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$TOOLKIT_DIR$\config\lnkstm8s105c6.icf</state>
+          <state>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -959,7 +965,7 @@
         </option>
         <option>
           <name>IccGenerateDebugInfo</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccOutputFile</name>

@@ -32,7 +32,7 @@ using namespace Mcudrv::T2;
 /* ----------------------- Start implementation -----------------------------*/
 BOOL xMBPortTimersInit( USHORT usTim1Timerout50us )
 {
-  Timer2::Init(Div_128, CEN);
+  Timer2::Init(Div_128, Default);
   Timer2::WriteAutoReload(usTim1Timerout50us);
   Timer2::ClearIntFlag(IRQ_Update);
   Timer2::EnableInterrupt(IRQ_Update);
@@ -44,10 +44,12 @@ void vMBPortTimersEnable(  )
 {
   /* Enable the timer with the timeout passed to xMBPortTimersInit( ) */
   Timer2::WriteCounter(0);
+  Timer2::Enable();
 }
 
 void vMBPortTimersDisable(  )
 {
+  Timer2::WriteCounter(0);
   Timer2::Disable();
   /* Disable any pending timers. */
 }

@@ -37,8 +37,18 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
     /* If xRXEnable enable serial receive interrupts. If xTxENable enable
      * transmitter empty interrupts.
      */
-  (xRxEnable ? Uart::EnableInterrupt : Uart::DisableInterrupt)(IrqRxne);
-  (xTxEnable ? Uart::EnableInterrupt : Uart::DisableInterrupt)(IrqTxEmpty);
+  if(xRxEnable) {
+    Uart::EnableInterrupt(IrqRxne);
+  }
+  else {
+    Uart::DisableInterrupt(IrqRxne);
+  }
+  if(xTxEnable) {
+    Uart::EnableInterrupt(IrqTxEmpty);
+  }
+  else {
+    Uart::DisableInterrupt(IrqTxEmpty);
+  }
 }
 
 BOOL xMBPortSerialInit( UCHAR /*ucPORT*/, ULONG /*ulBaudRate*/, UCHAR /*ucDataBits*/, eMBParity /*eParity*/ )
