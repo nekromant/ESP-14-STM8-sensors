@@ -17,6 +17,8 @@ using namespace Mcudrv;
 #define REG_INPUT_NREGS 5
 #define DEVICE_ADDRESS 42
 
+#define SENSOR_POLL_PERIOD 30 //in secs
+
 /* ----------------------- Static variables ---------------------------------*/
 static USHORT   usRegInputStart = REG_INPUT_START;
 static USHORT   usRegInputBuf[REG_INPUT_NREGS];
@@ -36,7 +38,7 @@ int main()
   GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
   GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
 
-  T4::Timer4::Init(T4::Div_128, T4::Cfg(T4::ARPE | T4::CEN)); // 60Hz
+  T4::Timer4::Init(T4::Div_128, T4::Cfg(T4::ARPE | T4::CEN)); // 61Hz
   T4::Timer4::EnableInterrupt();
 
   i2c::Init();
@@ -51,7 +53,7 @@ int main()
   eMBEnable();
   while(true) {
       eMBPoll( );
-      if(readSensorsTimer == 30 * 60) { // Secs * (timer frequency)
+      if(readSensorsTimer == SENSOR_POLL_PERIOD * 61) { // Secs * (timer frequency)
         readSensorsTimer = 0;
         PSensor::GetValues(pt);
         HSensor::GetValues(ht);
