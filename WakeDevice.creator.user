@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.2.1, 2017-04-01T14:31:01. -->
+<!-- Written by QtCreator 4.2.1, 2017-04-18T02:28:29. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -140,11 +140,11 @@
     <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>
     <value type="QString" key="BareMetal.CustomRunConfig.Executable"></value>
     <value type="QString" key="BareMetal.RunConfig.WorkingDirectory"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Run on GDB server or hardware debugger</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">esp-stm8-sensors (via GDB server or hardware debugger)</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">BareMetal.CustomRunConfig</value>
     <value type="QString" key="Qt4ProjectManager.MaemoRunConfiguration.Arguments"></value>
-    <value type="QString" key="Qt4ProjectManager.MaemoRunConfiguration.ProFile"></value>
+    <value type="QString" key="Qt4ProjectManager.MaemoRunConfiguration.ProFile">.</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>

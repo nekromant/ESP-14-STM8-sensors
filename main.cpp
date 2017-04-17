@@ -51,18 +51,19 @@ int main()
   eMBInit(MB_RTU, DEVICE_ADDRESS, 0, 9600, MB_PAR_NONE);
   enableInterrupts();
   eMBEnable();
+
   while(true) {
-      eMBPoll( );
-      if(readSensorsTimer == SENSOR_POLL_PERIOD * 61) { // Secs * (timer frequency)
-        readSensorsTimer = 0;
-        PSensor::GetValues(pt);
-        HSensor::GetValues(ht);
-        usRegInputBuf[0] = LSensor::Read();
-        usRegInputBuf[1] = uint16_t(pt.pressure - 60000UL);
-        usRegInputBuf[2] = pt.temperature;
-        usRegInputBuf[3] = ht.humidity;
-        usRegInputBuf[4] = ht.temperature;
-      }
+    eMBPoll( );
+    if(readSensorsTimer == SENSOR_POLL_PERIOD * 61) { // Secs * (timer frequency)
+      readSensorsTimer = 0;
+      PSensor::GetValues(pt);
+      HSensor::GetValues(ht);
+      usRegInputBuf[0] = LSensor::Read();
+      usRegInputBuf[1] = uint16_t(pt.pressure - 60000UL);
+      usRegInputBuf[2] = pt.temperature;
+      usRegInputBuf[3] = ht.humidity;
+      usRegInputBuf[4] = ht.temperature;
+    }
   }
 }
 
