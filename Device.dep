@@ -6,220 +6,174 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Obj\portevent.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbutils.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbcrc.pbi</file>
-      <file>$PROJ_DIR$\stm8\hal\pinlist.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncdisc.__cstat.et</file>
-      <file>$PROJ_DIR$\stm8\hal\stm8s.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncinput.pbi</file>
-      <file>$PROJ_DIR$\Debug\List\string_utils.s</file>
-      <file>$PROJ_DIR$\stm8\common\string_utils.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfunccoils.__cstat.et</file>
-      <file>$PROJ_DIR$\stm8\hal\timers.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbutils.pbi</file>
-      <file>$PROJ_DIR$\Debug\List\mbfuncholding.s</file>
-      <file>$PROJ_DIR$\Debug\List\mbcrc.s</file>
-      <file>$PROJ_DIR$\Debug\List\porttimer.s</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfunccoils.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbrtu.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncother.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\porttimer.o</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\portserial.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncholding.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncholding.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncdisc.o</file>
-      <file>$PROJ_DIR$\inc\crc.cpp</file>
-      <file>$PROJ_DIR$\stm8\hal\uart.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\crc.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\mb.o</file>
-      <file>$PROJ_DIR$\Debug\List\mbfuncdiag.s</file>
-      <file>$PROJ_DIR$\stm8\hal\delay.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\string_utils.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mb.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncinput.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\List\main.s</file>
-      <file>$PROJ_DIR$\Debug\List\portevent.s</file>
-      <file>$PROJ_DIR$\Debug\List\mbfuncinput.s</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncdiag.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-      <file>$PROJ_DIR$\stm8\hal\gpio.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbrtu.pbi</file>
-      <file>$PROJ_DIR$\modbus\include\mbport.h</file>
-      <file>$PROJ_DIR$\modbus\include\mbproto.h</file>
+      <file>$PROJ_DIR$\modbus\include\mbfunc.h</file>
       <file>$PROJ_DIR$\modbus\rtu\mbcrc.c</file>
       <file>$PROJ_DIR$\modbus\rtu\mbcrc.h</file>
-      <file>$PROJ_DIR$\modbus\include\mbfunc.h</file>
-      <file>$PROJ_DIR$\stm8\common\string_utils.cpp</file>
+      <file>$PROJ_DIR$\modbus\include\mbport.h</file>
+      <file>$PROJ_DIR$\modbus\include\mbproto.h</file>
       <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncholding.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbutils.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncinput.c</file>
-      <file>$PROJ_DIR$\modbus\include\mb.h</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncother.c</file>
+      <file>$PROJ_DIR$\stm8\common\string_utils.cpp</file>
       <file>$PROJ_DIR$\modbus\include\mbframe.h</file>
       <file>$PROJ_DIR$\modbus\functions\mbfuncdiag.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncholding.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncinput.c</file>
       <file>$PROJ_DIR$\modbus\functions\mbfunccoils.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbutils.c</file>
+      <file>$PROJ_DIR$\modbus\include\mb.h</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncother.c</file>
       <file>$PROJ_DIR$\modbus\include\mbconfig.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\porttimer.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncother.pbi</file>
-      <file>$PROJ_DIR$\modbus\mb.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbcrc.o</file>
-      <file>$PROJ_DIR$\modbus\stm8port\portevent.cpp</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncdiag.pbi</file>
-      <file>$PROJ_DIR$\modbus\stm8port\portserial.cpp</file>
-      <file>$PROJ_DIR$\modbus\stm8port\port.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\Debug\List\mbrtu.s</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</file>
       <file>$PROJ_DIR$\modbus\rtu\mbrtu.c</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncother.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\portserial.__cstat.et</file>
       <file>$PROJ_DIR$\modbus\stm8port\porttimer.cpp</file>
       <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\modbus\mb.c</file>
+      <file>$PROJ_DIR$\Debug\List\mbfuncholding.s</file>
+      <file>$PROJ_DIR$\modbus\stm8port\portevent.cpp</file>
+      <file>$PROJ_DIR$\modbus\stm8port\port.h</file>
+      <file>$PROJ_DIR$\modbus\stm8port\portserial.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbrtu.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncdisc.__cstat.et</file>
       <file>$PROJ_DIR$\modbus\rtu\mbrtu.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfunccoils.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\icons.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncholding.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncinput.o</file>
       <file>$PROJ_DIR$\Debug\List\mbfunccoils.s</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\porttimer.pbi</file>
-      <file>$PROJ_DIR$\Debug\List\mbfuncother.s</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbcrc.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncdiag.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\mb.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-      <file>$PROJ_DIR$\inc\crc.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbrtu.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\portserial.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\portevent.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\portserial.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbfuncdisc.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\mbfuncother.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbcrc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\string_utils.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\portevent.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncdisc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfunccoils.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncholding.o</file>
+      <file>$PROJ_DIR$\stm8\hal\timers.h</file>
       <file>$PROJ_DIR$\Debug\Obj\portevent.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncholding.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfunccoils.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbutils.__cstat.et</file>
+      <file>$PROJ_DIR$\stm8\common\string_utils.h</file>
+      <file>$PROJ_DIR$\Debug\List\main.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncother.pbi</file>
+      <file>$PROJ_DIR$\stm8\hal\delay.h</file>
+      <file>$PROJ_DIR$\Debug\List\mbfuncdiag.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\portevent.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\string_utils.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncdiag.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\List\mbfuncother.s</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncinput.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\List\mbcrc.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\mb.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbrtu.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncdisc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mb.o</file>
+      <file>$PROJ_DIR$\stm8\hal\stm8s.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbutils.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncdiag.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfunccoils.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\portserial.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\porttimer.__cstat.et</file>
+      <file>$PROJ_DIR$\inc\crc.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\portserial.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\inc\crc.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\porttimer.pbi</file>
+      <file>$PROJ_DIR$\stm8\hal\gpio.h</file>
+      <file>$PROJ_DIR$\Debug\List\mbrtu.s</file>
       <file>$PROJ_DIR$\Debug\List\mbfuncdisc.s</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
-      <file>$PROJ_DIR$\stm8\hal\crc.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$PROJ_DIR$\stm8s_hal\crc.h</file>
-      <file>$PROJ_DIR$\Resources\fonts.cpp</file>
-      <file>$PROJ_DIR$\Debug\Obj\string_utils.pbi</file>
-      <file>$PROJ_DIR$\stm8\common\circularBuffer.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\Device.hex</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
-      <file>$PROJ_DIR$\Debug\List\mbutils.s</file>
-      <file>$PROJ_DIR$\Resources\icons.h</file>
-      <file>$PROJ_DIR$\stm8\common\type_traits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\string_utils.o</file>
-      <file>$PROJ_DIR$\Resources\icons.cpp</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\Debug\List\crc.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncinput.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncholding.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\mb.pbi</file>
+      <file>$PROJ_DIR$\stm8\hal\uart.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbcrc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbrtu.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\fonts.pbi</file>
-      <file>$PROJ_DIR$\stm8\hal\i2c.h</file>
       <file>$PROJ_DIR$\Debug\Obj\fonts.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncinput.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\List\portevent.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbfuncdiag.o</file>
+      <file>$PROJ_DIR$\Debug\List\mbfuncinput.s</file>
+      <file>$PROJ_DIR$\stm8\hal\pinlist.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\icons.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbcrc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\string_utils.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\List\templproj.map</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\stm8\common\type_traits.h</file>
+      <file>$PROJ_DIR$\Resources\icons.cpp</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\crc.h</file>
+      <file>$PROJ_DIR$\stm8\hal\crc.h</file>
+      <file>$PROJ_DIR$\Resources\icons.h</file>
+      <file>$PROJ_DIR$\Resources\fonts.cpp</file>
+      <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\List\mbutils.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\porttimer.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.o</file>
+      <file>$PROJ_DIR$\Debug\List\crc.s</file>
+      <file>$PROJ_DIR$\Debug\List\portserial.s</file>
+      <file>$PROJ_DIR$\Debug\Exe\Device.hex</file>
+      <file>$PROJ_DIR$\Debug\List\mb.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\mbutils.o</file>
       <file>$PROJ_DIR$\Debug\Obj\icons.pbi</file>
       <file>$PROJ_DIR$\stm8s_hal\crc.cpp</file>
-      <file>$PROJ_DIR$\Debug\Obj\crc.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\mbutils.o</file>
-      <file>$PROJ_DIR$\Debug\List\portserial.s</file>
-      <file>$PROJ_DIR$\Debug\List\templproj.map</file>
-      <file>$PROJ_DIR$\Resources\fonts.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\crc.o</file>
-      <file>$PROJ_DIR$\Debug\List\mb.s</file>
-      <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\stm8\hal\clock.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\stm8\hal\i2c.h</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\stm8\common\circularBuffer.h</file>
+      <file>$PROJ_DIR$\Resources\fonts.h</file>
+      <file>$PROJ_DIR$\Debug\List\porttimer.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\string_utils.pbi</file>
+      <file>$PROJ_DIR$\stm8\hal\clock.h</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 108 126</file>
+          <file> 113 99</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\inc\crc.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 128</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 26</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 92 112 104 85 97 66 79 116 87</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\modbus\rtu\mbcrc.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 13 61</file>
+          <file> 58 33</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 2</file>
+          <file> 86</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 82</file>
+          <file> 96</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 65 38 112 66 85 97 92 79 116 5 104 115</file>
+          <file> 26 75 125 57 55 124 54 72 104 63 128 112</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 115 104 112 116 97 38 85 79 5 66 92 65</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\stm8\common\string_utils.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 7 113</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 102</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 30</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 106 112 66 85 97 92 79 116 107 8 111 104 78</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 112 79 107 8 85 116 97 92 111 104 106 78</file>
+          <file> 112 128 125 104 124 75 55 72 63 57 54 26</file>
         </tool>
       </inputs>
     </file>
@@ -228,160 +182,52 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 117 128</file>
+          <file> 117 116</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 26</file>
+          <file> 85</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 123</file>
+          <file> 98</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 98 104 112 66 85 97 92 79 116</file>
+          <file> 106 128 125 57 55 124 54 72 104</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 79 66 104 112 85 116 97 92 98</file>
+          <file> 72 57 128 125 55 104 124 54 106</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncholding.c</name>
+      <name>$PROJ_DIR$\stm8\common\string_utils.cpp</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 12 21</file>
+          <file> 50 97</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 22</file>
+          <file> 132</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 75</file>
+          <file> 34</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 54 57</file>
+          <file> 101 125 57 55 124 54 72 104 100 44 102 128 74</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 66 112 107 54 92 41 65 57 116 106 52 42 79 85 97 38 37 5 104 115</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 96 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 93</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 54 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 107 112 54 92 41 65 57 79 116 106 52 42 85 97 38 37 5 104 115</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbutils.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 109 124</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 11</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 1</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 42 107 65 112 115 106 52 79 5 104 37 85 116 97 92 38 41</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncinput.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 35 76</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 6</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 32</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 54 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 107 112 54 92 41 65 57 116 106 52 42 79 85 97 38 37 5 104 115</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncother.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 81 94</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 59</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 17</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 54 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 107 112 54 79 92 41 65 57 116 106 52 42 85 97 38 37 5 104 115</file>
+          <file> 57 125 72 100 44 55 104 124 54 102 128 101 74</file>
         </tool>
       </inputs>
     </file>
@@ -390,82 +236,55 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 28 83</file>
+          <file> 48 92</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 63</file>
+          <file> 65</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 36</file>
+          <file> 51</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfunccoils.c</name>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncholding.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 77 73</file>
+          <file> 24 38</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 15</file>
+          <file> 41</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 9</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 54 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 107 112 54 92 41 65 57 116 106 52 42 79 85 97 38 37 5 104 115</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\mb.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 129 27</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 31</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 84</file>
+          <file> 81</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 57 54 45 71</file>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 7 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 66 42 41 5 104 57 79 112 65 71 115 106 52 54 45 107 85 116 97 92 38 37</file>
+          <file> 57 125 100 7 54 3 26 15 104 101 13 4 72 55 124 75 53 63 128 112</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\stm8port\portevent.cpp</name>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncinput.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 34 95</file>
+          <file> 93 56</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 0</file>
+          <file> 80</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -475,544 +294,38 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 52 65 38 112 66 85 97 92 79 116 5 104 115 41 42</file>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 7 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 104 79 38 66 65 42 115 41 5 112 85 116 97 92 52</file>
+          <file> 57 100 125 7 54 3 26 15 104 101 13 4 72 55 124 75 53 63 128 112</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\stm8port\portserial.cpp</name>
+      <name>$PROJ_DIR$\modbus\functions\mbfunccoils.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 125 91</file>
+          <file> 31 66</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 89</file>
+          <file> 42</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 20</file>
+          <file> 37</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 65 38 112 66 85 97 92 79 116 5 104 115 52 41 42 25 132 39 111 78 107 10 103 8</file>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 7 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 132 79 104 38 66 8 5 78 107 41 115 10 52 25 112 85 116 97 92 65 42 39 103 111</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\rtu\mbrtu.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 67 88</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 16</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 37 112 66 85 97 92 79 116 107 106 65 38 5 104 115 52 41 42 71 54 44</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112 107 66 71 92 41 65 44 116 106 52 54 79 85 97 38 37 5 104 115 42</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\porttimer.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 14 18</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 80</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 58</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 52 65 38 112 66 85 97 92 79 116 5 104 115 41 42 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112 115 85 97 10 41 5 116 92 65 42 38 66 79 104 52</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 33 72</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 131</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 86</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 115 5 104 112 66 85 97 92 79 116 3 39 111 78 107 29 132 119 10 25 103 8 52 65 38 41 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112 85 52 111 41 3 25 116 104 39 10 78 5 29 119 115 66 79 132 8 97 92 107 103 65 42 38</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Resources\fonts.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 120</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 118</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112 79 104 66 85 127 116 97 92</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
-      <outputs>
-        <tool>
-          <name>OBJCOPY</name>
-          <file> 105</file>
-        </tool>
-        <tool>
-          <name>ILINK</name>
-          <file> 126</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 133 128 72 27 61 73 83 23 21 76 94 88 124 95 91 18 113 99 19</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Resources\icons.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 74</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 121</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66 112 79 116 104 85 97 92 110</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\stm8s_hal\crc.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 128</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 26</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 100 130</file>
-        </tool>
-      </inputs>
-    </file>
-  </configuration>
-  <configuration>
-    <name>Release</name>
-    <outputs>
-      <file>$PROJ_DIR$\stm8\hal\pinlist.h</file>
-      <file>$PROJ_DIR$\stm8\hal\stm8s.h</file>
-      <file>$PROJ_DIR$\stm8\common\string_utils.h</file>
-      <file>$PROJ_DIR$\stm8\hal\timers.h</file>
-      <file>$PROJ_DIR$\stm8\hal\uart.h</file>
-      <file>$PROJ_DIR$\stm8\hal\delay.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-      <file>$PROJ_DIR$\stm8\hal\gpio.h</file>
-      <file>$PROJ_DIR$\modbus\include\mbport.h</file>
-      <file>$PROJ_DIR$\modbus\include\mbproto.h</file>
-      <file>$PROJ_DIR$\modbus\rtu\mbcrc.c</file>
-      <file>$PROJ_DIR$\modbus\rtu\mbcrc.h</file>
-      <file>$PROJ_DIR$\modbus\include\mbfunc.h</file>
-      <file>$PROJ_DIR$\modbus\stm8port\portevent.c</file>
-      <file>$PROJ_DIR$\Release\Obj\string_utils.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\crc.o</file>
-      <file>$PROJ_DIR$\Release\Obj\string_utils.o</file>
-      <file>$PROJ_DIR$\modbus\stm8port\porttimer.c</file>
-      <file>$PROJ_DIR$\Release\Obj\demo.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\mbcrc.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mb.pbi</file>
-      <file>$PROJ_DIR$\modbus\stm8port\port\port.h</file>
-      <file>$PROJ_DIR$\Release\Obj\mb.o</file>
-      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncinput.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\crc.__cstat.et</file>
-      <file>$PROJ_DIR$\Release\Obj\mbutils.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfunccoils.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncdisc.pbi</file>
-      <file>$PROJ_DIR$\Release\Exe\Light.out</file>
-      <file>$PROJ_DIR$\Release\Obj\main.o</file>
-      <file>$PROJ_DIR$\Release\Obj\string_utils.pbi</file>
-      <file>$PROJ_DIR$\..\stm8_framework\hal\crc.cpp</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncdiag.o</file>
-      <file>$PROJ_DIR$\Release\Obj\portserial.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\mbutils.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncother.pbi</file>
-      <file>$PROJ_DIR$\modbus\stm8port\port\porttimer.c</file>
-      <file>$PROJ_DIR$\Release\Obj\crc.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\mbrtu.pbi</file>
-      <file>$PROJ_DIR$\..\stm8_framework\common\string_utils.cpp</file>
-      <file>$PROJ_DIR$\Release\Obj\demo.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncdisc.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbcrc.pbi</file>
-      <file>$PROJ_DIR$\Release\Exe\Device.hex</file>
-      <file>$PROJ_DIR$\Release\Obj\portevent.pbi</file>
-      <file>$PROJ_DIR$\modbus\stm8port\port\portevent.c</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfunccoils.pbi</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smn.a</file>
-      <file>$PROJ_DIR$\Release\Obj\mbrtu.o</file>
-      <file>$PROJ_DIR$\stm8\common\string_utils.cpp</file>
-      <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncholding.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbutils.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncinput.c</file>
-      <file>$PROJ_DIR$\modbus\include\mb.h</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncother.c</file>
-      <file>$PROJ_DIR$\modbus\include\mbframe.h</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfuncdiag.c</file>
-      <file>$PROJ_DIR$\modbus\functions\mbfunccoils.c</file>
-      <file>$PROJ_DIR$\modbus\include\mbconfig.h</file>
-      <file>$PROJ_DIR$\modbus\mb.c</file>
-      <file>$PROJ_DIR$\modbus\stm8port\portevent.cpp</file>
-      <file>$PROJ_DIR$\modbus\stm8port\portserial.cpp</file>
-      <file>$PROJ_DIR$\modbus\stm8port\port.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\modbus\rtu\mbrtu.c</file>
-      <file>$PROJ_DIR$\modbus\stm8port\porttimer.cpp</file>
-      <file>$PROJ_DIR$\main.cpp</file>
-      <file>$PROJ_DIR$\modbus\rtu\mbrtu.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\Release\Obj\porttimer.o</file>
-      <file>$PROJ_DIR$\modbus\stm8port\demo.c</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
-      <file>$PROJ_DIR$\Release\Obj\porttimer.pbi</file>
-      <file>$PROJ_DIR$\stm8\hal\crc.h</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncinput.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncother.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncholding.pbi</file>
-      <file>$PROJ_DIR$\modbus\stm8port\port\portserial.c</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncdiag.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\portevent.o</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$PROJ_DIR$\modbus\stm8port\portserial.c</file>
-      <file>$PROJ_DIR$\stm8\common\circularBuffer.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Release\Obj\portserial.o</file>
-      <file>$PROJ_DIR$\Release\Obj\mbfuncholding.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\stm8\common\type_traits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\stm8\hal\i2c.h</file>
-      <file>$PROJ_DIR$\stm8\hal\clock.h</file>
-      <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
-    </outputs>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 31</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\rtu\mbcrc.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 20</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 67 7 97 68 75 79 76 74 99 1 91 98</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97 7 75 1 68 74 99 67 79 76 91 98</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\portevent.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 87</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 58 67 7 97 68 75 79 76 74 99 1 91 98 9 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 76 7 99 67 10 68 97 75 79 98 9 1 74 91 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\porttimer.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 77</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 80</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 67 7 97 68 75 79 76 74 99 1 91 98 58 9 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 91 74 68 10 9 1 97 98 67 58 7 75 99 79 76</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Release\Exe\Light.out</name>
-      <outputs>
-        <tool>
-          <name>OBJCOPY</name>
-          <file> 46</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 102 16 32 23 20 29 35 44 93 82 83 51 28 87 92 77 17 88 50</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\stm8_framework\hal\crc.cpp</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 27</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\port\porttimer.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 80</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 91 74 68 10 9 1 97 98 22 58 7 75 99 79 76</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\stm8_framework\common\string_utils.cpp</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 15</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\port\portevent.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 76 7 99 22 10 68 97 75 79 98 9 1 74 91 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\stm8\common\string_utils.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 17</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 94 97 68 75 79 76 74 99 95 2 96 91 73</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 68 97 74 95 2 75 99 79 76 96 91 94 73</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\stm8\hal\crc.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 16</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 40</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 81 91 97 68 75 79 76 74 99</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 74 68 91 97 75 99 79 76 81</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncholding.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 93</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 60 63</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97 60 68 67 63 95 76 1 94 58 10 74 79 9 6 75 99 7 91 98</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 44</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 30</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 60 63</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97 68 60 67 63 74 76 1 94 58 10 95 79 9 6 75 99 7 91 98</file>
+          <file> 57 100 125 7 54 3 26 15 104 101 13 4 72 55 124 75 53 63 128 112</file>
         </tool>
       </inputs>
     </file>
@@ -1021,30 +334,462 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 28</file>
+          <file> 110 121</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 37</file>
+          <file> 64</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 43</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10</file>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 67 95 10 74 68 98 94 58 97 75 99 7 91 6 79 76 1 9</file>
+          <file> 57 4 100 26 125 112 101 13 72 63 128 53 55 104 124 54 75 3</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncinput.c</name>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncother.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
+          <file> 52 32</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 7 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57 100 125 7 72 54 3 26 15 104 101 13 4 55 124 75 53 63 128 112</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 79 36</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 7 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57 100 125 7 54 3 26 15 72 104 101 13 4 55 124 75 53 63 128 112</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\rtu\mbrtu.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 78 60</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 28</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 30 7 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 100 57 30 54 3 26 2 104 101 13 7 72 55 124 75 53 63 128 112 4</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\porttimer.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 131 111</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 13 26 75 125 57 55 124 54 72 104 63 128 112 3 4 39</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 112 55 124 39 3 63 104 54 26 4 75 57 72 128 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 45 67</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 114</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 84</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 112 63 128 125 57 55 124 54 72 104 94 77 102 74 100 47 133 126 39 83 129 44 13 26 75 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 55 13 102 3 94 83 104 128 77 39 74 63 47 126 112 57 72 133 44 124 54 100 129 26 4 75</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\mb.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 120 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
           <file> 82</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 53 125 57 55 124 54 72 104 100 101 26 75 63 128 112 13 3 4 15 7 0 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57 4 3 63 128 15 72 125 26 30 112 101 13 7 0 100 55 104 124 54 75 53</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\portevent.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 91 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 35</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 13 26 75 125 57 55 124 54 72 104 63 128 112 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 128 72 75 57 26 4 112 3 63 125 55 104 124 54 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\portserial.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 118 71</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 26 75 125 57 55 124 54 72 104 63 128 112 13 3 4 83 133 77 102 74 100 39 129 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 133 72 128 75 57 44 63 74 100 3 112 39 13 83 125 55 104 124 54 26 4 77 129 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\inc\crc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 116</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 54 125 128 55 124 57 72 104 73</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Resources\icons.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57 125 72 104 128 55 124 54 107</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Resources\fonts.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 89</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 72 128 57 55 130 104 124 54</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\templproj.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 119</file>
+        </tool>
+        <tool>
+          <name>ILINK</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 127 116 67 62 33 66 92 36 38 56 32 60 121 40 71 111 97 115 18</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8s_hal\crc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 116</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 105 109</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs>
+      <file>$PROJ_DIR$\modbus\include\mbfunc.h</file>
+      <file>$PROJ_DIR$\modbus\rtu\mbcrc.c</file>
+      <file>$PROJ_DIR$\modbus\rtu\mbcrc.h</file>
+      <file>$PROJ_DIR$\modbus\include\mbport.h</file>
+      <file>$PROJ_DIR$\modbus\include\mbproto.h</file>
+      <file>$PROJ_DIR$\Release\Obj\mbrtu.pbi</file>
+      <file>$PROJ_DIR$\Release\Exe\Light.out</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncholding.pbi</file>
+      <file>$PROJ_DIR$\modbus\stm8port\demo.c</file>
+      <file>$PROJ_DIR$\..\stm8_framework\common\string_utils.cpp</file>
+      <file>$PROJ_DIR$\modbus\stm8port\port\port.h</file>
+      <file>$PROJ_DIR$\Release\Obj\string_utils.o</file>
+      <file>$PROJ_DIR$\Release\Obj\string_utils.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\portevent.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\demo.pbi</file>
+      <file>$PROJ_DIR$\modbus\stm8port\port\portserial.c</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfunccoils.pbi</file>
+      <file>$PROJ_DIR$\Release\Exe\Device.hex</file>
+      <file>$PROJ_DIR$\Release\Obj\demo.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncdisc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncother.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncdiag.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncholding.o</file>
+      <file>$PROJ_DIR$\Release\Obj\portserial.pbi</file>
+      <file>$PROJ_DIR$\modbus\stm8port\port\portevent.c</file>
+      <file>$PROJ_DIR$\Release\Obj\mbrtu.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mbcrc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mbutils.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncinput.o</file>
+      <file>$PROJ_DIR$\Release\Obj\porttimer.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\main.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncinput.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\string_utils.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mbutils.o</file>
+      <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfunccoils.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncother.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\portserial.o</file>
+      <file>$PROJ_DIR$\Release\Obj\crc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncdiag.o</file>
+      <file>$PROJ_DIR$\modbus\stm8port\portserial.c</file>
+      <file>$PROJ_DIR$\Release\Obj\crc.o</file>
+      <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
+      <file>$PROJ_DIR$\stm8\common\string_utils.cpp</file>
+      <file>$PROJ_DIR$\modbus\include\mbframe.h</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncdiag.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncholding.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncinput.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfunccoils.c</file>
+      <file>$PROJ_DIR$\modbus\functions\mbutils.c</file>
+      <file>$PROJ_DIR$\modbus\include\mb.h</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncother.c</file>
+      <file>$PROJ_DIR$\modbus\include\mbconfig.h</file>
+      <file>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</file>
+      <file>$PROJ_DIR$\modbus\rtu\mbrtu.c</file>
+      <file>$PROJ_DIR$\modbus\stm8port\porttimer.cpp</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\modbus\mb.c</file>
+      <file>$PROJ_DIR$\modbus\stm8port\portevent.cpp</file>
+      <file>$PROJ_DIR$\modbus\stm8port\port.h</file>
+      <file>$PROJ_DIR$\modbus\stm8port\portserial.cpp</file>
+      <file>$PROJ_DIR$\modbus\rtu\mbrtu.h</file>
+      <file>$PROJ_DIR$\stm8\hal\timers.h</file>
+      <file>$PROJ_DIR$\stm8\common\string_utils.h</file>
+      <file>$PROJ_DIR$\stm8\hal\delay.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\stm8\hal\stm8s.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$PROJ_DIR$\stm8\hal\gpio.h</file>
+      <file>$PROJ_DIR$\stm8\hal\uart.h</file>
+      <file>$PROJ_DIR$\stm8\hal\pinlist.h</file>
+      <file>$PROJ_DIR$\Release\Obj\porttimer.o</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smn.a</file>
+      <file>$PROJ_DIR$\modbus\stm8port\porttimer.c</file>
+      <file>$PROJ_DIR$\Release\Obj\mbcrc.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mb.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\stm8\common\type_traits.h</file>
+      <file>$PROJ_DIR$\Release\Obj\mb.o</file>
+      <file>$PROJ_DIR$\Release\Obj\mbfuncdisc.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\modbus\stm8port\port\porttimer.c</file>
+      <file>$PROJ_DIR$\modbus\stm8port\portevent.c</file>
+      <file>$PROJ_DIR$\stm8\hal\crc.h</file>
+      <file>$PROJ_DIR$\Release\Obj\portevent.o</file>
+      <file>$PROJ_DIR$\..\stm8_framework\hal\crc.cpp</file>
+      <file>$PROJ_DIR$\Release\Obj\crc.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\stm8\hal\i2c.h</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\stm8\common\circularBuffer.h</file>
+      <file>$PROJ_DIR$\stm8\hal\clock.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\rtu\mbcrc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 79</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -1054,20 +799,120 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 60 63</file>
+          <file> 59 72 97 68 67 96 66 70 87 69 100 94</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 97 60 74 68 67 63 76 1 94 58 10 95 79 9 6 75 99 7 91 98</file>
+          <file> 97 72 67 69 68 70 87 59 96 66 100 94</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfuncother.c</name>
+      <name>$PROJ_DIR$\Release\Exe\Light.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 99 41 30 85 79 35 39 86 22 28 20 25 33 91 37 76 11 95 77</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\demo.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 83</file>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3 4 50</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm8_framework\common\string_utils.cpp</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 12</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\port\portserial.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69 97 4 3 70 68 100 94 10 50 72 67 87 96 66</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\port\portevent.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 72 87 10 4 68 97 67 96 94 3 69 70 100 50</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\portserial.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 59 72 97 68 67 96 66 70 87 69 100 94 50 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69 97 4 3 70 68 100 94 59 50 72 67 87 96 66</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\crc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 41</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -1077,11 +922,34 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 60 63</file>
+          <file> 90 100 97 68 67 96 66 70 87</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 97 60 74 68 67 63 76 1 94 58 10 95 79 9 6 75 99 7 91 98</file>
+          <file> 70 68 100 97 67 87 96 66 90</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\common\string_utils.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 83 97 68 67 96 66 70 87 81 63 84 100 71</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68 97 70 81 63 67 87 96 66 84 100 83 71</file>
         </tool>
       </inputs>
     </file>
@@ -1090,89 +958,112 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 35</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 86</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\functions\mbfunccoils.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 29</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 49</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 60 63</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 97 95 60 68 67 63 76 1 94 58 10 74 79 9 6 75 99 7 91 98</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\mb.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 23</file>
+          <file> 39</file>
         </tool>
         <tool>
           <name>BICOMP</name>
           <file> 21</file>
         </tool>
       </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 63 60 13 72</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 75 99 97 9 68 7 91 10 63 67 72 74 95 98 94 58 60 13 79 76 1 6</file>
-        </tool>
-      </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\stm8port\portevent.cpp</name>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncholding.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 87</file>
+          <file> 22</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 47</file>
+          <file> 7</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 58 67 7 97 68 75 79 76 74 99 1 91 98 9 10</file>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 44 52</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 76 7 99 67 10 68 97 75 79 98 9 1 74 91 58</file>
+          <file> 97 44 68 59 52 81 66 69 83 50 4 70 96 3 65 67 87 72 100 94</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\modbus\stm8port\portserial.cpp</name>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncinput.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 92</file>
+          <file> 28</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 44 52</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97 44 70 68 59 52 66 69 83 50 4 81 96 3 65 67 87 72 100 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\functions\mbfunccoils.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 44 52</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97 81 44 68 59 52 66 69 83 50 4 70 96 3 65 67 87 72 100 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\functions\mbutils.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59 81 4 70 68 94 83 50 97 67 87 72 100 65 96 66 69 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncother.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 20</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -1182,11 +1073,34 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 67 7 97 68 75 79 76 74 99 1 91 98 58 9 10 4 101 8 96 73 95 3 90 2</file>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 44 52</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 8 76 97 7 99 1 73 95 9 68 75 79 67 10 90 58 4 74 91 98 101 3 2 96</file>
+          <file> 97 44 70 68 59 52 66 69 83 50 4 81 96 3 65 67 87 72 100 94</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\functions\mbfuncdisc.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 44 52</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97 68 44 59 52 70 66 69 83 50 4 81 96 3 65 67 87 72 100 94</file>
         </tool>
       </inputs>
     </file>
@@ -1195,21 +1109,21 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 51</file>
+          <file> 25</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 41</file>
+          <file> 5</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6 97 68 75 79 76 74 99 95 94 67 7 1 91 98 58 9 10 72 60 12</file>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 61 44 2</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 74 97 72 68 67 12 76 1 94 58 60 9 95 79 6 75 99 7 91 98 10</file>
+          <file> 70 97 61 68 59 2 66 69 83 50 44 3 81 96 65 67 87 72 100 94 4</file>
         </tool>
       </inputs>
     </file>
@@ -1218,7 +1132,57 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 77</file>
+          <file> 76</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 50 59 72 97 68 67 96 66 70 87 69 100 94 3 4 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68 94 70 100 62 3 69 97 59 4 72 67 87 96 66 50</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 34</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 94 69 100 97 68 67 96 66 70 87 75 73 84 71 81 64 102 98 62 74 101 63 50 59 72 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 50 84 97 68 75 74 100 69 102 73 72 64 98 62 3 94 70 71 81 101 59 4 67 87 96 66 63</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\mb.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 85</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -1228,100 +1192,136 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 58 67 7 97 68 75 79 76 74 99 1 91 98 9 10 3</file>
+          <file> 65 97 68 67 96 66 70 87 81 83 59 72 69 100 94 50 3 4 52 44 0 61</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 68 98 74 91 3 9 1 97 67 10 7 75 99 79 76 58</file>
+          <file> 67 87 97 3 68 72 100 4 52 59 61 70 81 94 83 50 44 0 96 66 69 65</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\main.cpp</name>
+      <name>$PROJ_DIR$\modbus\stm8port\portevent.cpp</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 32</file>
+          <file> 91</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 24</file>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 50 59 72 97 68 67 96 66 70 87 69 100 94 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 72 87 59 4 68 97 67 96 94 3 69 70 100 50</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\portserial.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 59 72 97 68 67 96 66 70 87 69 100 94 50 3 4 74 102 73 84 71 81 62 101 63</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 73 66 97 72 87 69 71 81 3 68 67 96 59 4 101 50 74 70 100 94 102 62 63 84</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\porttimer.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 76</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 59 72 97 68 67 96 66 70 87 69 100 94 50 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 100 70 68 4 3 69 97 94 59 50 72 67 87 96 66</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\port\porttimer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 100 70 68 4 3 69 97 94 10 50 72 67 87 96 66</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\modbus\stm8port\portevent.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 91</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 50 59 72 97 68 67 96 66 70 87 69 100 94 3 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66 72 87 59 4 68 97 67 96 94 3 69 70 100 50</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm8_framework\hal\crc.cpp</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 25</file>
+          <file> 93</file>
         </tool>
       </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 98 1 91 97 68 75 79 76 74 99 0 8 96 73 95 5 101 100 3 4 90 2 58 67 7 9 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 58 96 97 68 0 4 91 1 101 8 7 5 100 3 9 98 74 73 95 90 67 10 75 99 79 76 2</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\demo.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 43</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 9 10 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\port\portserial.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 1 97 10 9 74 68 91 98 22 58 7 75 99 79 76</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\modbus\stm8port\portserial.c</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 92</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 36</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 67 7 97 68 75 79 76 74 99 1 91 98 58 9 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 1 97 10 9 74 68 91 98 67 58 7 75 99 79 76</file>
-        </tool>
-      </inputs>
     </file>
     <forcedrebuild>
-      <name>$PROJ_DIR$\modbus\stm8port\port\porttimer.c</name>
+      <name>$PROJ_DIR$\modbus\stm8port\demo.c</name>
       <tool>ICCSTM8</tool>
     </forcedrebuild>
     <forcedrebuild>
@@ -1329,15 +1329,15 @@
       <tool>ICCSTM8</tool>
     </forcedrebuild>
     <forcedrebuild>
+      <name>$PROJ_DIR$\modbus\stm8port\port\portserial.c</name>
+      <tool>ICCSTM8</tool>
+    </forcedrebuild>
+    <forcedrebuild>
       <name>$PROJ_DIR$\modbus\stm8port\port\portevent.c</name>
       <tool>ICCSTM8</tool>
     </forcedrebuild>
     <forcedrebuild>
-      <name>$PROJ_DIR$\modbus\stm8port\demo.c</name>
-      <tool>ICCSTM8</tool>
-    </forcedrebuild>
-    <forcedrebuild>
-      <name>$PROJ_DIR$\modbus\stm8port\port\portserial.c</name>
+      <name>$PROJ_DIR$\modbus\stm8port\port\porttimer.c</name>
       <tool>ICCSTM8</tool>
     </forcedrebuild>
   </configuration>
