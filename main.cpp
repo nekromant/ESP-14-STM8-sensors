@@ -26,6 +26,8 @@ typedef Twis::Bh1750<i2c> LSensor;
 typedef Twis::Bmp280<i2c> PSensor;
 typedef Twis::Hdc1080<i2c> HSensor;
 
+volatile static uint16_t readSensorsTimer;
+
 int main()
 {
 //  SysClock::SetHsiDivider(SysClock::Div1); //set F_CPU to 16 MHz
@@ -33,54 +35,33 @@ int main()
   GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
   GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
   GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
-//  i2c::Init();
-//  LSensor::Init();
-//  PSensor::Init();
 
+  T4::Timer4::Init(T4::Div_128, T4::Cfg(T4::ARPE | T4::CEN)); // 60Hz
+  T4::Timer4::EnableInterrupt();
+
+  i2c::Init();
+  LSensor::Init();
+  PSensor::Init();
+
+  PSensor::PT pt;
+  HSensor::HT ht;
 
   eMBInit(MB_RTU, DEVICE_ADDRESS, 0, 9600, MB_PAR_NONE);
   enableInterrupts();
   eMBEnable();
-  for(;;) {
-      eMBPoll( );
-      usRegInputBuf[0]++;
-  }
-//  Uart::Newline();
-/*  PSensor::PT pt;
-  HSensor::HT ht;
-  uint8_t buf[8];
   while(true) {
-    delay_ms(1000);
-    PSensor::GetValues(pt);
-    HSensor::GetValues(ht);
-    uint16_t lum = LSensor::Read();
-
-    Uart::Puts("<span style='color:#F4FA58'>");
-    Uart::Puts("<div style='font-size: 0.2em'>BH1750</div>");
-    Uart::Puts(lum);
-    Uart::Puts("<span style='font-size: 0.5em'>lx</span>");
-    Uart::Puts("</span>");
-
-    Uart::Puts("<span style='color:#F79F81'>");
-    Uart::Puts("<div style='font-size: 0.2em'>BMP280</div>");
-    Uart::Puts(pt.pressure);
-    Uart::Puts("<span style='font-size: 0.5em'>Pa</span>  ");
-    Uart::Puts((const char*)io::InsertDot(pt.temperature, 2, buf));
-    Uart::Puts("<span style='font-size: 0.5em'>°C</span>");
-    Uart::Puts("</span>");
-
-    Uart::Puts("<span style='color:#F5ECCE'>");
-    Uart::Puts("<div style='font-size: 0.2em'>HDC1080</div>");
-    Uart::Puts((const char*)io::InsertDot(ht.humidity, 1, buf));
-    Uart::Puts("<span style='font-size: 0.5em'>%</span>  ");
-    Uart::Puts((const char*)io::InsertDot(ht.temperature, 1, buf));
-    Uart::Puts("<span style='font-size: 0.5em'>°C</span>");
-    Uart::Puts("</span>");
-
-    Uart::Newline();
-
-	}
-    */
+      eMBPoll( );
+      if(readSensorsTimer == 30 * 60) { // Secs * (timer frequency)
+        readSensorsTimer = 0;
+        PSensor::GetValues(pt);
+        HSensor::GetValues(ht);
+        usRegInputBuf[0] = LSensor::Read();
+        usRegInputBuf[1] = uint16_t(pt.pressure - 60000UL);
+        usRegInputBuf[2] = pt.temperature;
+        usRegInputBuf[3] = ht.humidity;
+        usRegInputBuf[4] = ht.temperature;
+      }
+  }
 }
 
 extern "C"
@@ -104,4 +85,8 @@ eMBErrorCode eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRe
   return eStatus;
 }
 
-
+INTERRUPT_HANDLER(Timer4_ISR, TIM4_OVR_UIF_vector - 2)
+{
+  T4::Timer4::ClearIntFlag();
+  ++readSensorsTimer;
+}
