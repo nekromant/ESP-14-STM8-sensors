@@ -7,6 +7,7 @@
 #include "i2c.h"
 #include "uart.h"
 #include "timers.h"
+#include "pinlist.h"
 
 #include "mb.h"
 #include "mbport.h"
@@ -14,10 +15,10 @@
 using namespace Mcudrv;
 
 #define REG_INPUT_START 1
-#define REG_INPUT_NREGS 5
+#define REG_INPUT_NREGS 6
 #define DEVICE_ADDRESS 42
 
-#define SENSOR_POLL_PERIOD 30 //in secs
+#define SENSOR_POLL_PERIOD 5 //in secs
 
 /* ----------------------- Static variables ---------------------------------*/
 static USHORT   usRegInputStart = REG_INPUT_START;
@@ -28,7 +29,24 @@ typedef Twis::Bh1750<i2c> LSensor;
 typedef Twis::Bmp280<i2c> PSensor;
 typedef Twis::Hdc1080<i2c> HSensor;
 
-volatile static uint16_t readSensorsTimer;
+typedef Pinlist<Pc6, Pc7, Pd2, Pd3> Pins;
+
+volatile static uint16_t sensorsTimer;
+volatile static uint8_t PinsBuffered;
+
+static void FillValues()
+{
+  PSensor::PT pt;
+  HSensor::HT ht;
+
+  PSensor::GetValues(pt);
+  HSensor::GetValues(ht);
+  usRegInputBuf[0] = LSensor::Read();
+  usRegInputBuf[1] = uint16_t(pt.pressure - 60000UL);
+  usRegInputBuf[2] = pt.temperature;
+  usRegInputBuf[3] = ht.humidity;
+  usRegInputBuf[4] = ht.temperature;
+}
 
 int main()
 {
@@ -45,25 +63,23 @@ int main()
   LSensor::Init();
   PSensor::Init();
 
-  PSensor::PT pt;
-  HSensor::HT ht;
-
   eMBInit(MB_RTU, DEVICE_ADDRESS, 0, 9600, MB_PAR_NONE);
   enableInterrupts();
   eMBEnable();
 
+  FillValues();
+
+  uint8_t pinReadTimer = 0xFF;
   while(true) {
-    eMBPoll( );
-    if(readSensorsTimer == SENSOR_POLL_PERIOD * 61) { // Secs * (timer frequency)
-      readSensorsTimer = 0;
-      PSensor::GetValues(pt);
-      HSensor::GetValues(ht);
-      usRegInputBuf[0] = LSensor::Read();
-      usRegInputBuf[1] = uint16_t(pt.pressure - 60000UL);
-      usRegInputBuf[2] = pt.temperature;
-      usRegInputBuf[3] = ht.humidity;
-      usRegInputBuf[4] = ht.temperature;
+    if(sensorsTimer == SENSOR_POLL_PERIOD * 61) { // Secs * (timer frequency)
+      sensorsTimer = 0;
+      FillValues();
     }
+    if(pinReadTimer != sensorsTimer) {
+      pinReadTimer = sensorsTimer;
+      usRegInputBuf[5] = PinsBuffered;
+    }
+    eMBPoll();
   }
 }
 
@@ -91,5 +107,6 @@ eMBErrorCode eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRe
 INTERRUPT_HANDLER(Timer4_ISR, TIM4_OVR_UIF_vector - 2)
 {
   T4::Timer4::ClearIntFlag();
-  ++readSensorsTimer;
+  ++sensorsTimer;
+  PinsBuffered = Pins::Read();
 }
