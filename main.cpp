@@ -18,7 +18,7 @@ using namespace Mcudrv;
 #define REG_INPUT_NREGS 6
 #define DEVICE_ADDRESS 42
 
-#define SENSOR_POLL_PERIOD 5 //in secs
+#define SENSOR_POLL_PERIOD 30 //in secs
 
 /* ----------------------- Static variables ---------------------------------*/
 static USHORT   usRegInputStart = REG_INPUT_START;
