@@ -1,0 +1,75 @@
+esphome:
+  name: $devicename
+  platform: ESP8266
+  board: esp01_1m
+  build_path: build/gatecontrol
+  includes:
+    - stc15component.h
+
+# Deep sleep is broken on my board ;(
+#deep_sleep:
+#  run_duration: 30s
+#  sleep_duration: 30s
+
+substitutions:
+  devicename: "airspirit"
+
+#logger:
+#  level: DEBUG
+#  baud_rate: 0
+
+wifi:
+  networks:
+  - ssid: frostgate
+    password: XXXXXXX
+  power_save_mode: HIGH
+
+ota:
+  safe_mode: True
+  password: updateme
+
+api: 
+
+#mqtt:
+#  broker: 192.168.143.21
+#  client_id: ${devicename}
+
+web_server:
+  port: 80
+
+uart:
+  id: uart
+  baud_rate: 115200
+  tx_pin: GPIO1
+  rx_pin: GPIO3
+
+sensor:
+- platform: custom
+  lambda: |-
+    auto stc = new STC15Component(id(uart), 30000);
+    App.register_component(stc);
+    return {stc->lux, stc->temperature, stc->pressure, stc->humidity, stc->temperature2};
+  sensors:
+  - name: "${devicename} Lux Sensor"
+    unit_of_measurement: "lux"
+    accuracy_decimals: 1
+    icon: mdi:brightness-4
+  - name: "${devicename} Temperature Sensor (PT)"
+    unit_of_measurement: "C"
+    accuracy_decimals: 2
+    icon: mdi:temperature-celsius    
+  - name: "${devicename} Air Pressure Sensor"
+    unit_of_measurement: "mmHg"
+    accuracy_decimals: 2
+    icon: mdi:arrow-collapse-vertical
+  - name: "${devicename} Humidity Sensor"
+    unit_of_measurement: "%"
+    accuracy_decimals: 1
+    icon: mdi:water-percent
+  - name: "${devicename} Temperature Sensor (HT)"
+    unit_of_measurement: "C"
+    icon: mdi:temperature-celsius
+    accuracy_decimals: 2
+
+    
+    
